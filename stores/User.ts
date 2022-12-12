@@ -1,6 +1,5 @@
-import { defineStore, acceptHMRUpdate } from 'pinia'
-// need to look at Pinia store
-export const useUser = defineStore('User', {
+// need to look at Pinia course
+export const useUser = defineStore('user', {
   state: () => {
     return {
       isLoggedIn: false,
