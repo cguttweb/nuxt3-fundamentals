@@ -1,21 +1,17 @@
 <script setup>
 // 1st arg = key to identity the state & 2nd arg is default needs to be returned from callback function
 // const isLoggedIn = useState('isLoggedIn', () => false)
-const isLoggedIn = useIsLoggedIn()
+// const isLoggedIn = useIsLoggedIn()
+const user = useUser()
 definePageMeta({
   layout: 'plain',
 })
-
-function login() {
-  isLoggedIn.value = true
-  useRouter().push('/')
-}
 </script>
 
 <template>
   <div>
     <h2>Login</h2>
-    <form @submit.prevent="login">
+    <form @submit.prevent="user.login">
       <label for="">
         Username
         <input type="text" />
